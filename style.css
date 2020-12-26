@@ -1,0 +1,38 @@
+body{
+    background-color: red;
+}
+
+.container{
+    height:387px;
+    width:300px;
+    background-color:grey;
+    margin:auto;
+    border:solid 5px black;
+    position:relative;
+    top:300px;
+    
+
+}
+.digits{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    
+
+}
+
+button{
+    width:75px;
+    height:60px;
+    font-size:25px;
+}
+
+#zero{
+    width:150px;
+}
+.display{
+    width:325px;
+    height:75px;
+    background-color:grey;
+    border:solid 5px black;
+}
