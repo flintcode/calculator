@@ -10,4 +10,6 @@ What was Used/learned
 3. Used html input element to create display screen
 4. Used recursive function to store previous data that carried as the first digit in an operation
 5. Increased understanding of function and global scopes and using them properly to create function variables
+6. Using DOM and conditionals to create toggle for different background modes
+7. Used recursive functions to string operations with multiple operators
 
