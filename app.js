@@ -53,7 +53,6 @@ function operate(){;
   }
 
 function add () {
-    
 
     if(currentValue != "" && storedValue !== " "  && operator == "+"){        
         display.value = (Number(storedValue) + Number(currentValue));
@@ -85,7 +84,6 @@ function add () {
     
   
 function subtract (){
-
 
         if(currentValue != "" && storedValue !== " " && operator == "-"){        
             display.value = (Number(storedValue) - Number(currentValue));
@@ -185,12 +183,13 @@ function posNeg (){
     display.value = Number(display.value) *-1 
 }
 function addDecimal() {
-    display.value = display.value + "." ;
-    storedValue = Number(display.value);
+        display.value = display.value + "." ;
+        storedValue = Number(display.value);
 }
 
 function addPercent(){
-
+    display.value = Number(display.value) / 100;
+   
 }
 
 // number buttons
@@ -213,17 +212,51 @@ divideButton.addEventListener('click',divide)
 multiplyButton.addEventListener('click',multiply)
 equalsButton.addEventListener('click',operate)
 posNegButton.addEventListener('click',posNeg);
-decimalButton.addEventListener('click',addDecimal)
+decimalButton.addEventListener('click',addDecimal);
+percentButton.addEventListener('click',addPercent)
 
 // background modes
 function changeBackground (){
     if (document.body.style.background == "white"){
        document.body.style.background = '#202020';
+       darkColorChange()
     } else {
         document.body.style.background = "white";
+        lightColorChange()
     }
 }
-
+function darkColorChange (){
+    let darkElements = document.getElementsByClassName('container')
+    let darkNumbers = document.getElementsByClassName("numbers")
+        for(i = 0; i < darkElements.length; i++){
+        darkElements[i].style.backgroundColor = "white"
+        }
+ for (i = 0; i < darkNumbers.length; i++){
+     darkNumbers[i].style.backgroundColor = "#DCDCDC";
+ }
+       
+}
+function lightColorChange(){
+    let  lightElements = document.getElementsByClassName("container")
+    for(i = 0; i < lightElements.length; i++){
+        lightElements[i].style.backgroundColor = "black";
+    }
+    let lightNumbers = document.getElementsByClassName("numbers")
+    for (i = 0; i < lightNumbers.length; i++ ){
+     lightNumbers[i].style.backgroundColor = "#FFFFFF";
+    }
+}
 toggleMode.addEventListener('click', changeBackground );
 
- 
+
+//  function backSpace (){
+//     let backSpaceDisplay = display.value;
+//     return backSpaceDisplay.split("").slice(-1).join("")
+//  }
+
+
+//  let darkNUmblightNumbers = document.getElementsByClassName('NUmblightNumbers')
+// for (i = 0; i < darkNUmblightNumbers.length; i++){
+//     darkText[i].style.backgroundColor = "#606060"
+// }
+// 

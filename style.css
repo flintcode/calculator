@@ -4,16 +4,14 @@ body{
     bottom:65px;
 }
 .container{
-    height:410px;
-    width:316px;
+    height:430px;
+    width:295px;
     background-color:black;
     margin:auto;
-    border:solid 7px black;
+
     position:relative;
     top:175px;
     border-radius:2%;
-    
-
 }
 .digits{
     display:flex;
@@ -28,24 +26,26 @@ h1{
 }
 
 button{
-    width:75px;
+    width:69px;
     height:60px;
     font-size:25px;
-    margin:2px;
-    border-radius: 10%;
+    margin:3px 2px 2px 2px;
+    border-radius: 50%;
     border:none;
 }
 
 #zero{
-    width:154px;
+    width:144px;
 }
 #display{
-    width:300px;
+    width:270px;
     height:75px;
     background-color:#E0E0E0;
-    border:solid 5px black;
+    margin:10px;
     font-size: 75px;
     text-align: right;
+    border:none;
+    color:black;
 }
 input ::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
@@ -58,6 +58,9 @@ input::-webkit-inner-spin-button{
 }
 .functionals{
     background-color: #B8B8B8;
+}
+.numbers{
+    background-color:white;
 }
 
 #changeMode{
@@ -74,5 +77,9 @@ input::-webkit-inner-spin-button{
     position:Relative;
     left:48%;
     top:250px;
+}
+
+.darkModeContainer{
+    background-color: white;
 }
 
