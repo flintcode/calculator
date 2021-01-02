@@ -52,7 +52,7 @@ function operate(){;
         currentValue = 0;
         storedValue = Number(display.value);
     }
-  }
+}
 
 function add () {
 
@@ -82,97 +82,96 @@ function add () {
     
     }
     operator = "+";
-    }
+}
     
   
 function subtract (){
 
-        if(currentValue != "" && storedValue !== " " && operator == "-"){        
-            display.value = (Number(storedValue) - Number(currentValue));
-            storedValue = Number(display.value);
-            display.value = null;
-         }
-         else if (operator == "+"){
-            display.value = (Number(storedValue) + Number(currentValue));
-            storedValue = Number(display.value);
-            display.value = null;
-        }
-        else if (operator == "/"){
-            display.value = (Number(storedValue)/ Number(currentValue));
-            storedValue = Number(display.value);
-            display.value = null;
-        }
-        else if (operator == "*"){
-                display.value = (Number(storedValue) * Number(currentValue));
-                storedValue = Number(display.value);
-                display.value = null;
-        }
-        else {
-            storedValue = Number(display.value);
-            display.value = null;
+    if(currentValue != "" && storedValue !== " " && operator == "-"){        
+         display.value = (Number(storedValue) - Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
+    else if (operator == "+"){
+        display.value = (Number(storedValue) + Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
+    else if (operator == "/"){
+        display.value = (Number(storedValue)/ Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
+    else if (operator == "*"){
+        display.value = (Number(storedValue) * Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
+    else {
+        storedValue = Number(display.value);
+        display.value = null;
         
         }
         operator = "-"
-    }
+}
 function divide (){
 
-        if(currentValue != "" && storedValue !== " "  && operator == "/"){        
-            display.value = (Number(storedValue) / Number(currentValue));
-            storedValue = Number(display.value);
-            display.value = null;
-         }
-        else if (operator == "+"){
-            display.value = (Number(storedValue) + Number(currentValue));
-            storedValue = Number(display.value);
-            display.value = null;
-        }
-        else if (operator == "-"){
-            display.value = (Number(storedValue) - Number(currentValue));
-            storedValue = Number(display.value);
-            display.value = null;
-        }
-        else if (operator == "*"){
-                display.value = (Number(storedValue) * Number(currentValue));
-                storedValue = Number(display.value);
-                display.value = null;
-        }
+    if(currentValue != "" && storedValue !== " "  && operator == "/"){        
+        display.value = (Number(storedValue) / Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
+    else if (operator == "+"){
+        display.value = (Number(storedValue) + Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
+    else if (operator == "-"){
+        display.value = (Number(storedValue) - Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
+    else if (operator == "*"){
+        display.value = (Number(storedValue) * Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
     else{
         storedValue = Number(display.value);
         display.value = null;
     
-    }
-    operator = "/"
+        }
+        operator = "/"
 }
 function multiply(){
  
-        if(currentValue != "" && storedValue !== " " && operator == "*"){        
-            display.value = (Number(storedValue) * Number(currentValue));
-            storedValue = Number(display.value);
-            display.value = null;
-         }
-        else if (operator == "+"){
-            display.value = (Number(storedValue) + Number(currentValue));
-            storedValue = Number(display.value);
-            display.value = null;
-        }
-        else if (operator == "-"){
-            display.value = (Number(storedValue) - Number(currentValue));
-            storedValue = Number(display.value);
-            display.value = null;
-        }
-        else if (operator == "/"){
-                display.value = (Number(storedValue) / Number(currentValue));
-                storedValue = Number(display.value);
-                display.value = null;
-        }
-         
-    else{
-            storedValue = Number(display.value);
-            display.value = null;
-        
-        }
-        operator = "*"
+    if(currentValue != "" && storedValue !== " " && operator == "*"){        
+        display.value = (Number(storedValue) * Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
     }
+    else if (operator == "+"){
+        display.value = (Number(storedValue) + Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
+    else if (operator == "-"){
+        display.value = (Number(storedValue) - Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
+    else if (operator == "/"){
+        display.value = (Number(storedValue) / Number(currentValue));
+        storedValue = Number(display.value);
+        display.value = null;
+    }
+    else{
+        storedValue = Number(display.value);
+        display.value = null;
+        
+    }
+    operator = "*"
+}
     
 function allClear (){
     display.value = null;
@@ -248,11 +247,12 @@ function darkColorChange (){
         for (i = 0; i < darkTitle.length; i++){
             darkTitle[i].style.color = "white";
         }
-}
+    }
 
     let  lightElements = document.getElementsByClassName("container")
     let lightNumbers = document.getElementsByClassName("numbers")
     let lightTitle = document.getElementsByClassName("title");
+    
 function lightColorChange(){
    
     for(i = 0; i < lightElements.length; i++){
@@ -266,16 +266,3 @@ function lightColorChange(){
     }
 }
 toggleMode.addEventListener('click', changeBackground);
-
-
-//  function backSpace (){
-//     let backSpaceDisplay = display.value;
-//     return backSpaceDisplay.split("").slice(-1).join("")
-//  }
-
-
-//  let darkNUmblightNumbers = document.getElementsByClassName('NUmblightNumbers')
-// for (i = 0; i < darkNUmblightNumbers.length; i++){
-//     darkText[i].style.backgroundColor = "#606060"
-// }
-// 
