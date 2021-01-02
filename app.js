@@ -219,18 +219,19 @@ percentButton.addEventListener('click',addPercent)
 
 
 // background modes
-let toggled = true;
+let toggled = false;
 function changeBackground (){
     
-    if (toggled){
+    if (toggled == false){
        document.body.style.background = '#202020';
        darkColorChange();
-       toggled = false;
+       toggled = true;
       
-    } else {
+    } 
+    else {
         document.body.style.background = "white";
         lightColorChange();
-        toggled = true;
+        toggled = false;
     }
 }
     let darkElements = document.getElementsByClassName('container');
