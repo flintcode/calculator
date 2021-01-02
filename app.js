@@ -20,7 +20,8 @@ const eightButton = document.querySelector("#numberEight");
 const nineButton = document.querySelector("#numberNine");
 const toggleMode = document.querySelector("#changeMode");
 const allDigits = document.querySelectorAll("digits");
-const mainTitle = document.querySelector("title")
+
+
 
 let operator = "";
 let currentValue = '';
@@ -215,21 +216,27 @@ posNegButton.addEventListener('click',posNeg);
 decimalButton.addEventListener('click',addDecimal);
 percentButton.addEventListener('click',addPercent)
 
+
+
 // background modes
+let toggled = true;
 function changeBackground (){
- 
-    if (document.body.style.background == "white"){
+    
+    if (toggled){
        document.body.style.background = '#202020';
-       darkColorChange()
-    } else{
+       darkColorChange();
+       toggled = false;
+      
+    } else {
         document.body.style.background = "white";
-        lightColorChange()
+        lightColorChange();
+        toggled = true;
     }
 }
-
-function darkColorChange (){
     let darkElements = document.getElementsByClassName('container');
     let darkNumbers = document.getElementsByClassName("numbers");
+    let darkTitle = document.getElementsByClassName("title");
+function darkColorChange (){
     
         for(i = 0; i < darkElements.length; i++){
             darkElements[i].style.backgroundColor = "white";
@@ -237,18 +244,27 @@ function darkColorChange (){
         for (i = 0; i < darkNumbers.length; i++){
             darkNumbers[i].style.backgroundColor = "#DCDCDC";
         }
+        for (i = 0; i < darkTitle.length; i++){
+            darkTitle[i].style.color = "white";
+        }
 }
-function lightColorChange(){
+
     let  lightElements = document.getElementsByClassName("container")
+    let lightNumbers = document.getElementsByClassName("numbers")
+    let lightTitle = document.getElementsByClassName("title");
+function lightColorChange(){
+   
     for(i = 0; i < lightElements.length; i++){
         lightElements[i].style.backgroundColor = "black";
     }
-    let lightNumbers = document.getElementsByClassName("numbers")
     for (i = 0; i < lightNumbers.length; i++ ){
      lightNumbers[i].style.backgroundColor = "#FFFFFF";
     }
+    for (i = 0; i < lightTitle.length; i++){
+        lightTitle[i].style.color = "black";
+    }
 }
-toggleMode.addEventListener('click', changeBackground );
+toggleMode.addEventListener('click', changeBackground);
 
 
 //  function backSpace (){

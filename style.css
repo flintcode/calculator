@@ -3,6 +3,7 @@ body{
     position:relative;
     bottom:65px;
     font-family: 'Audiowide', cursive;
+    background: white;
 }
 .container{
     height:430px;
@@ -162,4 +163,9 @@ input:checked + .slider:before{
 
 #lightToggle{
     margin:35px;
+    background: white;
+}
+
+.darkToggle {
+    background: rgb(32, 32, 32);
 }
