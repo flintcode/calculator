@@ -12,4 +12,5 @@ What was Used/learned
 5. Increased understanding of function and global scopes and using them properly to create function variables
 6. Using DOM and conditionals to create toggle for different background modes
 7. Used recursive functions to string operations with multiple operators
+8. Using before and after elements in css to create toggle switch 
 

@@ -19,7 +19,8 @@ const sevenButton = document.querySelector("#numberSeven");
 const eightButton = document.querySelector("#numberEight");
 const nineButton = document.querySelector("#numberNine");
 const toggleMode = document.querySelector("#changeMode");
-const allDigits = document.querySelectorAll("digits")
+const allDigits = document.querySelectorAll("digits");
+const mainTitle = document.querySelector("title")
 
 let operator = "";
 let currentValue = '';
@@ -182,14 +183,13 @@ function allClear (){
 function posNeg (){
     display.value = Number(display.value) *-1 
 }
+
 function addDecimal() {
         display.value = display.value + "." ;
-        storedValue = Number(display.value);
 }
 
 function addPercent(){
     display.value = Number(display.value) / 100;
-   
 }
 
 // number buttons
@@ -217,24 +217,26 @@ percentButton.addEventListener('click',addPercent)
 
 // background modes
 function changeBackground (){
+ 
     if (document.body.style.background == "white"){
        document.body.style.background = '#202020';
        darkColorChange()
-    } else {
+    } else{
         document.body.style.background = "white";
         lightColorChange()
     }
 }
+
 function darkColorChange (){
-    let darkElements = document.getElementsByClassName('container')
-    let darkNumbers = document.getElementsByClassName("numbers")
+    let darkElements = document.getElementsByClassName('container');
+    let darkNumbers = document.getElementsByClassName("numbers");
+    
         for(i = 0; i < darkElements.length; i++){
-        darkElements[i].style.backgroundColor = "white"
+            darkElements[i].style.backgroundColor = "white";
         }
- for (i = 0; i < darkNumbers.length; i++){
-     darkNumbers[i].style.backgroundColor = "#DCDCDC";
- }
-       
+        for (i = 0; i < darkNumbers.length; i++){
+            darkNumbers[i].style.backgroundColor = "#DCDCDC";
+        }
 }
 function lightColorChange(){
     let  lightElements = document.getElementsByClassName("container")

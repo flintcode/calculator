@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
     <title> Flintcode Calculator</title>
-    <head> <link rel = "stylesheet" href = "style.css"></head>
+    <head> <link rel = "stylesheet" href = "style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet"></head>
     <body>
-
-       
-        <div id = "mySidNav" class = "sideNav">
-        </div>
+        <h1 id = "title">
+            The Modern Machine
+        </h1>
         
         <div class = 'container'>
             <div class = "digits">
@@ -33,9 +34,13 @@
             </div>
         </div>
 
-        <div class = "backgroundButtons">
-            <button id = "changeMode">Dark</button>
-        </div>
+     
+        <label class ="switch">
+            
+            <input id = "changeMode" type = "checkbox" checked>
+            <span class = "slider round"></span>
+        </label>
+  
     </body>
     <script src = "app.js"> </script>
 </html>
