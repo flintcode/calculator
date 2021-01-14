@@ -240,12 +240,16 @@ function darkColorChange (){
     
         for(i = 0; i < darkElements.length; i++){
             darkElements[i].style.backgroundColor = "white";
+            darkElements[i].style.transition = "all 0.3s";
+
         }
         for (i = 0; i < darkNumbers.length; i++){
             darkNumbers[i].style.backgroundColor = "#DCDCDC";
+            darkNumbers[i].style.transition = "all 0.3s";
         }
         for (i = 0; i < darkTitle.length; i++){
             darkTitle[i].style.color = "white";
+            darkTitle[i].style.transition = "all 0.3s";
         }
     }
 
@@ -257,12 +261,15 @@ function lightColorChange(){
    
     for(i = 0; i < lightElements.length; i++){
         lightElements[i].style.backgroundColor = "black";
+        lightElements[i].style.transition = "all 0.3s";
     }
     for (i = 0; i < lightNumbers.length; i++ ){
      lightNumbers[i].style.backgroundColor = "#FFFFFF";
+     lightNumbers[i].style.transition = "all 0.3s";
     }
     for (i = 0; i < lightTitle.length; i++){
         lightTitle[i].style.color = "black";
+        lightTitle[i].style.transition = "all 0.3s";
     }
 }
 toggleMode.addEventListener('click', changeBackground);

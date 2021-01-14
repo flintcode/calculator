@@ -4,6 +4,16 @@ body{
     bottom:65px;
     font-family: 'Audiowide', cursive;
     background: white;
+    animation: slideFromLeft 1s;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform:translateX(-200%);
+    }
+    100%{
+        transform:translateX(0%);
+    }
 }
 .container{
     height:430px;
