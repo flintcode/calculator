@@ -164,7 +164,7 @@ input:checked + .slider:before{
     background: rgb(32, 32, 32);
 }
 
-@media only screen 
+/* @media only screen 
     and (device-width: 375px) 
     and (device-height: 812px) 
     and (-webkit-device-pixel-ratio: 3) { 
@@ -172,13 +172,13 @@ input:checked + .slider:before{
             width:200px;
             height: 350px;
         }
-    }
+    } */
 
     @media only screen 
-    and (max-width: 600px) 
+    and (max-width:600px) 
     { 
         #display {
-            width:200px;
-            height: 350px;
+            width:265px;
+            height: 60px;
         }
     }
