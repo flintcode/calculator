@@ -67,14 +67,30 @@ function add () {
         display.value = null;
     }
     else if (operator == "/"){
-        display.value = (Number(storedValue)/ Number(currentValue));
+        if(currentValue == 0) {         
+            display.value = (Number(storedValue));
+            storedValue = Number(display.value);
+            display.value = null;
+        }
+        else {
+            display.value = (Number(storedValue)/ Number(currentValue));
         storedValue = Number(display.value);
         display.value = null;
+        }
+        
     }
     else if (operator == "*"){
+        if(currentValue == 0) {         
+            display.value = (Number(storedValue));
+            storedValue = Number(display.value);
+            display.value = null;
+        }
+        else {
             display.value = (Number(storedValue) * Number(currentValue));
             storedValue = Number(display.value);
             display.value = null;
+        }
+            
     }
     else{
         storedValue = Number(display.value);
@@ -98,14 +114,29 @@ function subtract (){
         display.value = null;
     }
     else if (operator == "/"){
-        display.value = (Number(storedValue)/ Number(currentValue));
+        if(currentValue == 0) {         
+            display.value = (Number(storedValue));
+            storedValue = Number(display.value);
+            display.value = null;
+        }
+        else {
+            display.value = (Number(storedValue)/ Number(currentValue));
         storedValue = Number(display.value);
         display.value = null;
+        }
     }
     else if (operator == "*"){
-        display.value = (Number(storedValue) * Number(currentValue));
+        if(currentValue == 0) {         
+            display.value = (Number(storedValue));
+            storedValue = Number(display.value);
+            display.value = null;
+        }
+        else {
+            display.value = (Number(storedValue) * Number(currentValue));
         storedValue = Number(display.value);
         display.value = null;
+        }
+        
     }
     else {
         storedValue = Number(display.value);
@@ -132,9 +163,17 @@ function divide (){
         display.value = null;
     }
     else if (operator == "*"){
-        display.value = (Number(storedValue) * Number(currentValue));
+        if(currentValue == 0) {         
+            display.value = (Number(storedValue));
+            storedValue = Number(display.value);
+            display.value = null;
+        }
+        else {
+            display.value = (Number(storedValue) * Number(currentValue));
         storedValue = Number(display.value);
         display.value = null;
+        }
+        
     }
     else{
         storedValue = Number(display.value);
@@ -161,9 +200,16 @@ function multiply(){
         display.value = null;
     }
     else if (operator == "/"){
-        display.value = (Number(storedValue) / Number(currentValue));
+        if(currentValue == 0) {         
+            display.value = (Number(storedValue));
+            storedValue = Number(display.value);
+            display.value = null;
+        }
+        else {
+            display.value = (Number(storedValue)/ Number(currentValue));
         storedValue = Number(display.value);
         display.value = null;
+        }
     }
     else{
         storedValue = Number(display.value);
