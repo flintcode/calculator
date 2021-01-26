@@ -163,3 +163,13 @@ input:checked + .slider:before{
 .darkToggle {
     background: rgb(32, 32, 32);
 }
+
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+        #display {
+            width:200px;
+            height: 350px;
+        }
+    }
